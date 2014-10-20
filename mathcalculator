@@ -1,0 +1,151 @@
+//Programmer: John Fetokis (email: jfetokis@gmail.com)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double add(double num1,double num2)
+{
+    double d;
+    d=num1+num2;
+    return d;
+}
+double sub(double num1,double num2)
+{
+    double d;
+    d=num1-num2;
+    return d;
+}
+
+double mul(double num1,double num2)
+{
+    double d;
+    d=num1*num2;
+    return d;
+}
+double div (double num1,double num2)
+{
+    double d;
+    d=num1/num2;
+    return d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+    int choice;
+    double num1,num2;
+   do
+{ // Display the menu and get a choice.
+cout << "-_Calculator Menu_- " <<endl;
+cout << "------------------------------\n";
+cout << "1. -.Addition.- " <<endl;
+cout << "2. -.Subtraction.- " <<endl;
+cout << "3. -.Multiplication.- "<<endl;
+cout << "4. -.Division.- " <<endl;
+cout << "5. -.Square root.- " <<endl;
+cout << "6. -.Absolute value.-" <<endl;
+cout << "7. -.Raises a number to a strength.-" <<endl;
+cout << "8. Quit this program " <<endl;
+cout << "------------------------------\n";
+cout << "Enter your choice (1-8): ";
+cin >> choice;
+
+// Validate the choice.
+while (choice < 1 || choice > 8)
+{
+cout << "The valid choices are 1, 2, 3, "
+<< "4, 5, 6, 7, and 8. Please choose: ";
+cin >> choice;
+}
+
+// Produce a calculator.
+switch (choice)
+{
+case 1: //The user chose addition.
+ cout <<"Enter two numbers for addition" <<endl;
+ cin >> num1;
+ cout <<"+"<<endl;
+ cin >> num2;
+ cout <<"="<<endl;
+ cout << add(num1,num2) <<endl;
+
+break;
+
+case 2: //The user chose subtraction.
+ cout <<"Enter two numbers for subtraction" <<endl;
+
+ cin >> num1;
+ cout <<"-" <<endl;
+ cin >> num2;
+ cout <<"="<<endl;
+  cout << sub(num1,num2) <<endl;
+
+break;
+
+case 3: //The user chose multiplication.
+ cout <<"Enter two numbers for multiplication" <<endl;
+ cin >> num1;
+ cout <<"*" <<endl;
+ cin >> num2;
+ cout <<"="<<endl;
+ cout << mul(num1,num2) <<endl;
+break;
+
+case 4: //The user chose division.
+ cout <<"Enter two numbers for division" <<endl;
+ cin >> num1;
+ cout <<"/" <<endl;
+ cin >> num2;
+ cout <<"="<<endl;
+ cout << div(num1,num2) <<endl;
+break;
+
+case 5: //The user chose square root.
+ cout <<"Enter one number for square root " <<endl;
+ cin >> num1;
+ cout <<"x^(1/2)" <<endl;
+ cout <<"=" <<endl;
+ cout <<sqrt(num1)<<endl;
+
+ break ;
+
+case 6: //The user chose absolute value.
+ cout <<"Enter one number for absolute value" <<endl;
+ cin >> num1;
+ cout <<"|x|" <<endl;
+ cout <<"=" <<endl;
+ cout <<fabs(num1) <<endl;
+ break;
+
+case 7: //The user chose raises a number to a strength.
+ cout <<"Enter first number" <<endl;
+ cin >> num1;
+ cout <<"Enter number raise to higher power" <<endl;
+ cin >> num2;
+ cout <<"x^y" <<endl;
+ cout <<"=" <<endl;
+ cout <<pow(num1,num2) <<endl;
+ break ;
+
+
+case 8: // The user chose to quit the program.
+cout << "Thank you for using Math Calculator.\n\n";
+break;
+}
+
+} while (choice != 8); // Loop again system("PAUSE");
+
+}
